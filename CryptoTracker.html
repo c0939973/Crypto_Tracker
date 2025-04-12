@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crypto Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Real-Time Cryptocurrency Tracker</h1>
+  </header>
+
+  <section id="preferences">
+    <label for="sort">Sort by:</label>
+    <select id="sort">
+      <option value="market_cap_desc">Market Cap</option>
+      <option value="volume_desc">Volume</option>
+      <option value="id_asc">Name (A-Z)</option>
+      <option value="id_desc">Name (Z-A)</option>
+    </select>
+  </section>
+
+  <main id="app-main">
+    <aside id="crypto-sidebar"></aside>
+
+    <section id="crypto-list">
+      <h2>Cryptocurrency List</h2>
+      <div id="list-container"></div>
+      <div class="button-container">
+        <button id="load-more">More</button>
+        <button id="load-less" style="display:none;">Less</button>
+      </div>
+    </section>
+
+    <section id="comparison-panel">
+      <div>
+        <div><h2>Comparison Panel</h2></div>
+        <div id="comparison-container" style="display: flex; flex-wrap: wrap; gap: 1rem;"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="Script.js"></script>
+</body>
+</html>
