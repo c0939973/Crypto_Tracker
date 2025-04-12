@@ -94,3 +94,5 @@ const API_URL = 'https://api.coingecko.com/api/v3/coins/markets';
     sortSelect.addEventListener('change', fetchCryptoData);
     fetchCryptoData();
     setInterval(fetchCryptoData, 60000);
+
+    // test comment . 
