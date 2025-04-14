@@ -2,28 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Crypto Tracker</title>
-  <!-- style file -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Real-Time Cryptocurrency Tracker</h1>
+    <h1>Cryptocurrency Tracker</h1>
   </header>
 
   <section id="preferences">
     <label for="sort">Sort by:</label>
     <select id="sort">
-      <option value="market_cap_desc">Market Cap</option>
+      <option value="market_cap_rank">Market Cap</option>
       <option value="volume_desc">Volume</option>
-      <option value="id_asc">Name (A-Z)</option>
-      <option value="id_desc">Name (Z-A)</option>
+      <option value="price_change_percentage_24h">Price change in 24h</option>
     </select>
+    <button onclick="showComparisonPanel()">Show Comparison</button>
   </section>
 
   <main id="app-main">
-    <aside id="crypto-sidebar"></aside>
+    <aside id="crypto-sidebar">
+      <h3>Coin List</h3>
+      <div id="sidebar-container"></div>
+      <div class="button-container">
+        <button id="sidebar-more">More</button>
+        <button id="sidebar-less" style="display:none;">Less</button>
+      </div>
+    </aside>
 
     <section id="crypto-list">
       <h2>Cryptocurrency List</h2>
@@ -35,13 +41,12 @@
     </section>
 
     <section id="comparison-panel">
-      <div>
-        <div><h2>Comparison Panel</h2></div>
+      <div style="width: 100%;">
+        <h2>Comparison Panel <button onclick="hideComparisonPanel()">Close</button></h2>
         <div id="comparison-container" style="display: flex; flex-wrap: wrap; gap: 1rem;"></div>
       </div>
     </section>
   </main>
+  <script src="script.js"></script>
 </body>
-<!-- scripting file -->
-<script src="script.js"></script>
 </html>
